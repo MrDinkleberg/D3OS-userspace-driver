@@ -1,0 +1,13 @@
+[package]
+edition = "2024"
+name = "ports"
+version = "0.1.0"
+authors = ["Lars"]
+
+[lib]
+test = false
+doctest = false
+bench = false
+
+[dependencies]
+syscall = { path = "../syscall" }
