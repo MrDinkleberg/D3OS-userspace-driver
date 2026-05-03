@@ -19,7 +19,7 @@ use x86_64::{PrivilegeLevel, VirtAddr};
 use crate::{core_local_storage, tss};
 use log::info;
 use x86_64::registers::rflags::RFlags;
-
+use crate::syscall::sys_ports::{sys_read_port, sys_write_port};
 use super::sys_concurrent::{
     sys_process_count, sys_process_execute_binary, sys_process_exit,
     sys_process_id, sys_thread_count, sys_process_status, 
@@ -169,6 +169,8 @@ impl SyscallTable {
                 sys_shm_attach as *const _,
                 sys_shm_detach as *const _,
                 sys_shm_unlink as *const _,
+                sys_write_port as *const _,
+                sys_read_port as *const _,
             ],
         }
     }
