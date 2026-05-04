@@ -28,7 +28,6 @@ members = [
     "os/application/httpd",
     "os/application/proctest",
     "os/application/cat",
-    "os/library/ports"
 ]
 
 # [profile.release]

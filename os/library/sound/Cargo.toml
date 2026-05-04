@@ -1,0 +1,14 @@
+[package]
+edition = "2024"
+name = "sound"
+version = "0.1.0"
+authors = ["Lars"]
+
+[lib]
+test = false
+doctest = false
+bench = false
+
+[dependencies]
+ports = { path = "../ports" }
+spin = "0.10.0"
